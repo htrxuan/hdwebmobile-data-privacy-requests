@@ -16,8 +16,8 @@ Let customers request their own data be exported or erased from My Account, via 
 
 HDWebmobile Data Privacy Requests adds "Request data export" and "Request account erasure" buttons to a logged-in customer's My Account dashboard. Every request is filed through WordPress's own core personal-data request system -- this plugin does not reimplement export or erasure itself.
 
-= Why this plugin exists =
-Several competing GDPR/data-request plugins for WooCommerce accepted an email address directly from the request body when a logged-in customer submitted a data export or erasure request, and used that submitted email -- rather than the requester's own account email -- to create the underlying privacy request (CWE-863, Incorrect Authorization). A logged-in customer could submit someone else's email address and initiate an export or erasure request against a stranger's data.
+= Security by design =
+A common weakness in GDPR/data-request tools is accepting an email address directly from the request body when a logged-in customer submits a data export or erasure request, and using that submitted email -- rather than the requester's own account email -- to create the underlying privacy request (CWE-863, Incorrect Authorization). A logged-in customer could submit someone else's email address and initiate an export or erasure request against a stranger's data.
 
 This plugin never has an email field to submit in the first place:
 
