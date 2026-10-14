@@ -34,6 +34,9 @@ This plugin never has an email field to submit in the first place:
 * Logged-in customers only -- guests should use WordPress's own default admin-initiated privacy request tools
 * Does not change what data WooCommerce exports/erases -- that's still governed by WooCommerce's and WordPress's own core exporters/erasers
 
+= Enjoying this plugin? =
+If it helps your site, please consider [leaving an honest review on WordPress.org](https://wordpress.org/support/plugin/hdwebmobile-data-privacy-requests/reviews/#new-post) -- it helps other WordPress users find it. Found a problem or have an idea? Please [open a support topic](https://wordpress.org/support/plugin/hdwebmobile-data-privacy-requests/) first so it can be fixed.
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-data-privacy-requests` directory, or install the plugin through the WordPress plugins screen directly.
