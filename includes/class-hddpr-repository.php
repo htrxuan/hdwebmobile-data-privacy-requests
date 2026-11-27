@@ -10,12 +10,11 @@ if (!defined('ABSPATH')) {
  * The only class that ever files a WordPress core personal-data request on a customer's
  * behalf.
  *
- * Several competing GDPR/data-request plugins for WooCommerce accepted an email address
- * directly from the request body when a logged-in customer submitted a data export or
- * erasure request, and used THAT email -- rather than the requester's own account email -- to
- * create the underlying privacy request (CWE-863, Incorrect Authorization). A logged-in
- * customer could submit someone else's email address and initiate an export or erasure
- * request against a stranger's data.
+ * The risk this guards against (CWE-863, Incorrect Authorization): accepting an email address
+ * from the request body when a logged-in customer submits a data export or erasure request,
+ * and using THAT email -- rather than the requester's own account email -- to create the
+ * underlying privacy request. A customer could then submit someone else's email address and
+ * initiate an export or erasure request against a stranger's data.
  *
  * This plugin never has an email field to submit in the first place: create_request() takes a
  * user id as its FIRST parameter -- never an email -- and always derives the email from that

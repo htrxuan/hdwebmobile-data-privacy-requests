@@ -12,7 +12,7 @@ Adds "Request data export" and "Request account erasure" buttons to a logged-in 
 
 ## Why this plugin exists
 
-Several competing GDPR/data-request plugins for WooCommerce accepted an email address directly from the request body when a logged-in customer submitted a data export or erasure request, and used that submitted email -- rather than the requester's own account email -- to create the underlying privacy request (CWE-863, Incorrect Authorization). A logged-in customer could submit someone else's email address and initiate an export or erasure request against a stranger's data.
+A common flaw in GDPR/data-request plugins: accepting an email address directly from the request body when a logged-in customer submits a data export or erasure request, and using that submitted email -- rather than the requester's own account email -- to create the underlying privacy request (CWE-863, Incorrect Authorization). A logged-in customer could then submit someone else's email address and initiate an export or erasure request against a stranger's data.
 
 This plugin never has an email field to submit in the first place:
 
